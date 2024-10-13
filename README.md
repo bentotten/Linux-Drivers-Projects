@@ -4,4 +4,8 @@ through the Kernel Drivers handbook
 
 https://lwn.net/Kernel/LDD3/
 
-Kernel version: 6.6.46-04023-gef804018a050
+Raspberry Pi 3 Model B
+
+Useful links:
+- https://www.raspberrypi.com/documentation/computers/linux_kernel.html
+- https://stackoverflow.com/questions/20167411/how-to-compile-a-kernel-module-for-raspberry-pi
