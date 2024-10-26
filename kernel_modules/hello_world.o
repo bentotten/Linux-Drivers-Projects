@@ -1,16 +1,61 @@
 #include <linux/init.h>
 #include <linux/module.h>
 
-# p16, p31
+# p16, p31, p34
+
+/* Cleanup example 2 */
+void cleanup(void) {
+	if (item1) {
+		release_thing(item1);
+	}
+	if(things_are_ok) {
+		unregister_stuff()
+	}
+}
 
 static int __init hello_init(void) {
+	int err = -ENOMEM;
+
 	printk(KERN_ALERT "Hello world!");
 	printk(KERN_ALERT "\nThe current process is \"%s\" (PID: %i)", current->comm, current->pid); 
+
+	/* Small-device error catching example 1 */
+	int *ptr_thing;
+	int err = register_thing(ptr_thing, "foo");
+	if(err) {
+		goto fail_thing;
+	}
+	int err = register_thing2(ptr_thing2, "bar");
+	if(err) {
+		goto fail_thing2;
+	}
+
+
+	/* Small-device error catching example 2 */
+	item1 = allocate_thing(args);
+	if (!item1) {
+		goto fail;
+	err = register_item1(item1);
+	if(!err) {
+		things_are_ok = 1;
+	}
+	else {
+		goto fail;
+	}
 	return 0;
+	
+	fail: cleanup();
+	fail_thing2: unregister_thing(ptr_thing, "foo");
+	fail_thing: 
+		return err;
 }
 
 static void __exit hello_cleanup(void) {
 	printk(KERN_ALERT "Goodnight sweet prince");
+
+	/* Cleanup function example 1 */
+	unregister_thing(ptr_thing, "foo");
+	unregister_thing2(ptr_thing2, "bar");
 }
 
 module_init(hello_init);
