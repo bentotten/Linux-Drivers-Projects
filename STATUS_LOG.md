@@ -8,7 +8,7 @@ https://lwn.net/Kernel/LDD3/
 Log of my experiences working through this project.
 
 ### 10-26-24 - 
-Working on building the native kernel now. While this was ongoing, made a makefile.
+Working on building the native kernel now. While this was ongoing, made a makefile and learned about cleaning up failed module initializations, module params, and info fields. While reading through chapter 2, have been suprised to see how DANGEROUS kernel modules are. An application can crash and lose data if you make a mistake, but a mistake in a kernel module can hang the entire system. Also suprised to see that kernel memory is not swappable. I thought it was interesting this book recommends approaching new/unusal hardware with user space modules before moving it to a full kernel module to speed up early development.
 
 ### 10-14-24 - More Lessons in Trust and Hardware
 Switched to the arduino nano sense today. After seeing three different wiring guides, finally went with the guide outlined in the arduino camera module's file to connect the OV7670. Could not figure out why I was unable to detect the arduino, discovered the usb cable I was using only delivered **power** not **data**. Trust but Verify lesson learned today. Was finally able to stream from the camera to the arduino and display on my computer!
