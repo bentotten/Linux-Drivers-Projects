@@ -58,9 +58,17 @@ static void __exit hello_cleanup(void) {
 	unregister_thing2(ptr_thing2, "bar");
 }
 
+/* Module parameters */
+static char *USERNAME = "default";
+static int COUNT = 1;
+module_param(USERNAME, charp, S_IRUGO);
+module_param(COUNT, int, S_IRUGO);
+
+/* Init and exit functions
 module_init(hello_init);
 module_exit(hello_exit);
 
+/* Info sections */
 MODULE_VERSION(0.1);
 MODULE_LICENSE("Dual BSD/GPL");
 MODULE_AUTHOR("Ben Totten");
