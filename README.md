@@ -19,12 +19,6 @@ Arduinos:
 Auxiliary:
 OV7670 CMOS VGA Camera Module
 
-# Linux-Drivers-Projects
-Armed with two raspi’s and a fleet of arduinos, this is my repo working 
-through the Kernel Drivers handbook
-
-https://lwn.net/Kernel/LDD3/
-
 ## Running Log
 Log of my experiences working through this project.
 
