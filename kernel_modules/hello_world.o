@@ -3,8 +3,6 @@
 
 # p16, p31
 
-MODULE_LICENSE("Dual BSD/GPL");
-
 static int __init hello_init(void) {
 	printk(KERN_ALERT "Hello world!");
 	printk(KERN_ALERT "\nThe current process is \"%s\" (PID: %i)", current->comm, current->pid); 
@@ -17,4 +15,9 @@ static void __exit hello_cleanup(void) {
 
 module_init(hello_init);
 module_exit(hello_exit);
+
+MODULE_VERSION(0.1);
+MODULE_LICENSE("Dual BSD/GPL");
+MODULE_AUTHOR("Ben Totten");
+MODULE_DESCRIPTION("Linux Driver Project");
 
