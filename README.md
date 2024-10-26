@@ -1,8 +1,10 @@
 # Linux-Drivers-Projects
 Armed with two raspi’s and a fleet of arduinos, this is my repo working 
-through the Kernel Drivers handbook
+through the O'Reilly Linux Kernel Drivers book and the O'Reilly Arduino Cookbook.
 
 https://lwn.net/Kernel/LDD3/
+
+https://cdn.instructables.com/ORIG/FFN/1L27/J7MFSITD/FFN1L27J7MFSITD.pdf
 
 Raspis:
 - Raspberry Pi 3 Model B
