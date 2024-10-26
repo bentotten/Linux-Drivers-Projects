@@ -1,14 +1,17 @@
 #include <linux/init.h>
 #include <linux/module.h>
+
+# p16, p31
+
 MODULE_LICENSE("Dual BSD/GPL");
 
-static int hello_init(void) {
+static int __init hello_init(void) {
 	printk(KERN_ALERT "Hello world!");
 	printk(KERN_ALERT "\nThe current process is \"%s\" (PID: %i)", current->comm, current->pid); 
 	return 0;
 }
 
-static void hello_exit(void) {
+static void __exit hello_cleanup(void) {
 	printk(KERN_ALERT "Goodnight sweet prince");
 }
 
