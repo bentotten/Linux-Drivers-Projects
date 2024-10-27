@@ -27,6 +27,8 @@ Working on building the native kernel now. While this was ongoing, made a makefi
 
 While waiting for the pi to build a native linux kernel, shifting back to the arduino projects. For my first task/challenge, I'm opting to try to print error codes to an LCD screen on a breadboard so I dont have to spend an hour debugging a bad usb cable again next time.
 
+Pi froze, rebuilt with htop up and discovered it was thrashing! Maybe the documentation did not expect me to be running it from the desktop; killed the GUI, shut off periferals, and reran with -j4 instead of -j6. This seems to be out of swap and continuing to build (albiet slowly).
+
 ### 10-14-24 - More Lessons in Trust and Hardware
 Switched to the arduino nano sense today. After seeing three different wiring guides, finally went with the guide outlined in the arduino camera module's file to connect the OV7670. Could not figure out why I was unable to detect the arduino, discovered the usb cable I was using only delivered **power** not **data**. Trust but Verify lesson learned today. Was finally able to stream from the camera to the arduino and display on my computer!
 
