@@ -23,7 +23,7 @@ OV7670 CMOS VGA Camera Module
 Log of my experiences working through this project.
 
 ### 10-26-24 - 
-Working on building the native kernel now. While this was ongoing, made a makefile and learned about cleaning up failed module initializations, module params, and info fields. While reading through chapter 2, have been suprised to see how DANGEROUS kernel modules are. An application can crash and lose data if you make a mistake, but a mistake in a kernel module can hang the entire system. Also suprised to see that kernel memory is not swappable. I thought it was interesting this book recommends approaching new/unusal hardware with user space modules before moving it to a full kernel module to speed up early development.
+Working on building the native kernel now. While this was ongoing, made a makefile and learned about cleaning up failed module initializations, module params, and info fields. Also suprised to see that kernel memory is not swappable. I thought it was interesting this book recommends approaching new/unusal hardware with user space modules before moving it to a full kernel module to speed up early development.
 
 While waiting for the pi to build a native linux kernel, shifting back to the arduino projects. For my first task/challenge, I'm opting to try to print error codes to an LCD screen on a breadboard so I dont have to spend an hour debugging a bad usb cable again next time.
 
