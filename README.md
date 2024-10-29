@@ -29,6 +29,8 @@ While waiting for the pi to build a native linux kernel, shifting back to the ar
 
 Pi froze, rebuilt with htop up and discovered it was thrashing! Maybe the documentation did not expect me to be running it from the desktop; killed the GUI, shut off periferals, and reran with -j4 instead of -j6. This seems to be out of swap and continuing to build (albiet slowly).
 
+Next time will cross compile this.
+
 References:
 - https://www.raspberrypi.com/documentation/computers/linux_kernel.html
 
@@ -40,7 +42,7 @@ References:
 - https://blog.arduino.cc/2020/06/24/machine-vision-with-low-cost-
 
 ### 10-13-24 - Lessons in Hardware
-Hardware is important. Took a suprising amount of time to track down a mouse, keyboard, ethernet cable, and monitor. Then immediately learned the importance of checking the voltage before applying a power source to a small board (120v vs 5v led to "electronics smell and Ben being down a raspi). Took a bit of time to download and unzip a native kernel. Discovered the joys of the linux kernel vs raspi's linux fork and had to re-download a new kernel specific to the raspi.
+Hardware is important. Immediately learned the importance of checking the voltage before applying a power source to a small board (120v vs 5v led to "electronics smell and Ben being down a raspi). Took a bit of time to download and unzip a native kernel. Discovered the joys of the linux kernel vs raspi's linux fork and had to re-download a new kernel specific to the raspi.
 
 References:
 - https://www.kernel.org
